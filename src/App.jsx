@@ -1,3 +1,5 @@
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import gamextremeImg from "./assets/gamextreme.png";
 import asensoBarberImg from "./assets/asensoBarber.png";
@@ -5,6 +7,9 @@ import flyLenaImg from "./assets/flyLena.png";
 import perfil from "./assets/perfil.jpg";
 
 export default function PortfolioPro() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const skills = [
     {
       title: "HTML5",
@@ -82,7 +87,7 @@ export default function PortfolioPro() {
     {
       title: 'Web Ecommerce',
       desc: 'Ecommerce gamer desarrollado con React y Firebase. Incluye catálogo dinámico, filtrado por categorías, carrito de compras y consumo de base de datos en tiempo real.',
-      tech: ['React', 'Firebase','Firestore', 'Bootstrap', 'Responsive', 'UI Design'],
+      tech: ['React', 'Firebase', 'Firestore', 'Bootstrap', 'Responsive', 'UI Design'],
       image: gamextremeImg,
       link: 'https://gonzasenso.github.io/React-JS/',
       github: 'https://github.com/Gonzasenso/React-JS',
@@ -112,28 +117,118 @@ export default function PortfolioPro() {
     });
   };
 
+
   return (
     <div className="bg-[#0b1120] text-white min-h-screen font-sans overflow-x-hidden">
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/20 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
-          <h1 className="text-2xl font-bold text-cyan-400">{'</>'} Gonzalo Asenso</h1>
+      <header className="fixed top-0 w-full z-50 bg-[#0b1120]/80 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
 
+          {/* Logo */}
+          <h1 className="text-2xl font-bold text-cyan-400">
+            {"</>"} Gonzalo Asenso
+          </h1>
+
+          {/* Menú Desktop */}
           <nav className="hidden md:flex gap-10 text-sm text-white/80">
-            <a href="#inicio" className="hover:text-cyan-400 transition">Inicio</a>
-            <a href="#sobre" className="hover:text-cyan-400 transition">Sobre mí</a>
-            <a href="#skills" className="hover:text-cyan-400 transition">Habilidades</a>
-            <a href="#proyectos" className="hover:text-cyan-400 transition">Proyectos</a>
-            <a href="#contacto" className="hover:text-cyan-400 transition">Contacto</a>
+            <a href="#inicio" className="hover:text-cyan-400 transition">
+              Inicio
+            </a>
+
+            <a href="#sobre" className="hover:text-cyan-400 transition">
+              Sobre mí
+            </a>
+
+            <a href="#skills" className="hover:text-cyan-400 transition">
+              Habilidades
+            </a>
+
+            <a href="#proyectos" className="hover:text-cyan-400 transition">
+              Proyectos
+            </a>
+
+            <a href="#contacto" className="hover:text-cyan-400 transition">
+              Contacto
+            </a>
           </nav>
 
+          {/* Botón CV Desktop */}
           <a
             href="/CV-Asenso-Gonzalo.pdf"
             download
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold hover:scale-105 transition"
+            className="hidden md:block bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
             Descargar CV
           </a>
+
+          {/* Hamburguesa Mobile */}
+          <button
+            className="md:hidden text-3xl text-cyan-400 transition-all duration-300 hover:scale-110"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+
+          {/* Menú Mobile */}
+          <div
+            className={`absolute top-full left-0 w-full bg-[#0b1120]/95 backdrop-blur-md border-t border-white/10 md:hidden overflow-hidden transition-all duration-500 ease-in-out ${menuOpen
+                ? "max-h-96 opacity-100"
+                : "max-h-0 opacity-0"
+              }`}
+          >
+            <div className="flex flex-col items-center py-6 gap-6 text-white">
+
+              <a
+                href="#inicio"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-cyan-400 transition"
+              >
+                Inicio
+              </a>
+
+              <a
+                href="#sobre"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-cyan-400 transition"
+              >
+                Sobre mí
+              </a>
+
+              <a
+                href="#skills"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-cyan-400 transition"
+              >
+                Habilidades
+              </a>
+
+              <a
+                href="#proyectos"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-cyan-400 transition"
+              >
+                Proyectos
+              </a>
+
+              <a
+                href="#contacto"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-cyan-400 transition"
+              >
+                Contacto
+              </a>
+
+              <a
+                href="/CV-Asenso-Gonzalo.pdf"
+                download
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold"
+              >
+                Descargar CV
+              </a>
+
+            </div>
+          </div>
+
         </div>
       </header>
 
@@ -307,7 +402,7 @@ export default function PortfolioPro() {
           </div>
 
           {/* GRID */}
-          <div className="grid lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
