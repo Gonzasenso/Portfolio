@@ -154,8 +154,9 @@ export default function PortfolioPro() {
 
           {/* Botón CV Desktop */}
           <a
-            href="./CV-Asenso-Gonzalo.pdf"
-            download
+            href="https://gonzasenso.github.io/Portfolio/CV-Asenso-Gonzalo.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:block bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
             Descargar CV
@@ -172,8 +173,8 @@ export default function PortfolioPro() {
           {/* Menú Mobile */}
           <div
             className={`absolute top-full left-0 w-full bg-[#0b1120]/95 backdrop-blur-md border-t border-white/10 md:hidden overflow-hidden transition-all duration-500 ease-in-out ${menuOpen
-                ? "max-h-96 opacity-100"
-                : "max-h-0 opacity-0"
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0"
               }`}
           >
             <div className="flex flex-col items-center py-6 gap-6 text-white">
