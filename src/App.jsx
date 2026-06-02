@@ -154,7 +154,7 @@ export default function PortfolioPro() {
 
           {/* Botón CV Desktop */}
           <a
-            href="/CV-Asenso-Gonzalo.pdf"
+            href="./CV-Asenso-Gonzalo.pdf"
             download
             className="hidden md:block bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
