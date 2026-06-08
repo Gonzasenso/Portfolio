@@ -154,9 +154,8 @@ export default function PortfolioPro() {
 
           {/* Botón CV Desktop */}
           <a
-            href="https://gonzasenso.github.io/Portfolio/Curriculum-Asenso-DW"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/Portfolio/Curriculum-Asenso-DW.pdf"
+            download
             className="hidden md:block bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
             Descargar CV
@@ -220,7 +219,7 @@ export default function PortfolioPro() {
               </a>
 
               <a
-                href="/Curriculum-Asenso-DW"
+                href="/Portfolio/Curriculum-Asenso-DW.pdf"
                 download
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 rounded-full font-semibold"
               >
