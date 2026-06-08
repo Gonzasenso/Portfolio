@@ -1,16 +1,42 @@
-# React + Vite
+# 💼 Portfolio - Gonzalo Asenso
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal desarrollado con React y Tailwind CSS para mostrar mis proyectos, habilidades y formación como desarrollador web.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 https://gonzasenso.github.io/Portfolio/
 
-## React Compiler
+## 🛠 Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS
+- JavaScript
+- HTML5
+- CSS3
 
-## Expanding the ESLint configuration
+## 📂 Proyectos Destacados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎮 GamerXtreme Ecommerce
+Ecommerce gamer desarrollado con React y Firebase. Incluye catálogo dinámico, filtrado por categorías y carrito de compras.
+
+### 💈 Web Barbería
+Landing page moderna para barbería con diseño responsive y experiencia visual orientada a clientes.
+
+### ✈️ Travel Argentina
+Proyecto universitario enfocado en turismo y reservas con diseño responsive y navegación intuitiva.
+
+## 📚 Formación
+
+- Tecnicatura Universitaria en Desarrollo Web / Mobile
+- Universidad Nacional de La Matanza (UNLaM)
+
+## 📬 Contacto
+
+- LinkedIn: https://www.linkedin.com/in/gonzalo-asenso-314a97283/
+- GitHub: https://github.com/Gonzasenso
+- Email: gonzasenso12@gmail.com
+
+---
+
+Desarrollado por Gonzalo Asenso 🚀
